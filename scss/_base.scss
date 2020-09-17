@@ -1,0 +1,25 @@
+//Base
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+//Colors 
+
+$dark1: hsl(217, 28%, 15%);
+$dark2: hsl(218, 28%, 13%);
+$dark3: hsl(216, 53%, 9%);
+$dark4: hsl(219, 30%, 18%);
+
+$light: hsl(0, 0%, 100%);
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Raleway', sans-serif;
