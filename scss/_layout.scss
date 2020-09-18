@@ -114,9 +114,22 @@ body {
     &__icon {
       text-align: center;
       color: $light;
-    //   border: 1px solid gold;
       width: 41rem;
       padding: 5rem 2.5rem 2.5rem;
+    }
+
+    &__icon-wrapper {
+        position: relative;
+        width: 15rem;
+        height: 10rem;
+        margin: auto;
+    }
+
+    &__image {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
     }
 
     &__title {
