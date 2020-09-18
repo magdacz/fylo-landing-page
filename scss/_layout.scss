@@ -50,7 +50,7 @@ body {
         margin-top: 3.5rem;
     }
 
-    &__describe {
+    &__description {
         font-size: 1.8rem;
         font-family: 'Open Sans', sans-serif;
         margin-top: 2.5rem;
@@ -58,7 +58,7 @@ body {
 
     &__btn {
         font-size: 1.4rem;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-weight: 700;
         color: $light;
         padding: 1.5rem 9rem;
@@ -72,7 +72,64 @@ body {
     }
 }
 
+.nav {
+    width: 90%;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
 
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 5.5rem;
+    }
+
+    &__link {
+        color: $light;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.8rem;
+    }
+}
+
+// FEATURES
+
+.features {
+    width: 70%;
+    margin: auto;
+    padding-top: 3rem;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__icon {
+      text-align: center;
+      color: $light;
+    //   border: 1px solid gold;
+      width: 41rem;
+      padding: 5rem 2.5rem 2.5rem;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-family: 'Raleway', sans-serif;
+        padding: 2rem 0 0.5rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
 
 
 
