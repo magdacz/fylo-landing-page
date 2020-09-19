@@ -196,4 +196,63 @@ body {
   color: #50B1AF;
   margin-right: 0.5rem;
 }
+
+.team .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 11rem;
+}
+
+.team .profile__wrapper {
+  width: 35rem;
+  color: white;
+  background-color: #202a3c;
+  padding: 4rem 3rem 0;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+.team .profile__quote-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+}
+
+.team .profile__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0 3rem;
+}
+
+.team .profile__img-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  overflow: hidden;
+}
+
+.team .profile__img {
+  width: 100%;
+  height: 100%;
+}
+
+.team .profile__name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
+
+.team .profile__work {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0.2rem;
+}
 /*# sourceMappingURL=style.css.map */
