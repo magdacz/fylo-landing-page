@@ -213,10 +213,68 @@ body {
         }
 
     }
-
-    
 }
 
+// FOOTER
 
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(216, 53%, 9%);
+    padding: 18rem 2rem 8rem;
+
+    
+    &__location {
+        display: flex;
+        width: 35rem;
+    }
+
+    &__icon-wrapper{
+         margin-right: 2rem;
+     }
+
+     &__contact {
+         display: flex;
+         flex-direction: column;
+     }
+
+     &__contact-info {
+         display: flex;
+         margin-bottom: 1.5rem;
+     }
+
+     &__contact-icon {
+         margin-right: 2rem;
+     }
+
+     &__links {
+         display: flex;
+         flex-direction: column;
+     }
+
+     &__link {
+         color: $light;
+         margin-bottom: 1.5rem;
+     }
+
+     &__social-media {
+         display: flex;
+         flex-direction: row;
+     }
+
+     &__social-icon {
+        color: $light;
+        font-size: 2rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        text-align: center;
+        line-height: 3.5rem;
+        border-radius: 50%;
+        border: 1px solid $light;
+        margin-right: 2rem;
+     }
+}
 
 
