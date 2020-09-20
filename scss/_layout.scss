@@ -3,6 +3,26 @@ body {
     color: $light;
 }
 
+button {
+    font-size: 1.4rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: $light;
+    padding: 1.5rem 9rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: cornflowerblue;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(90deg, hsl(176, 68%, 64%),hsl(198, 60%, 50%) );
+    box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+    cursor: pointer;
+}
+
+.button--signIn {
+    padding: 1.5rem 3rem;
+}
+
 
 // HEADER
 
@@ -55,21 +75,6 @@ body {
         font-size: 1.8rem;
         font-family: 'Open Sans', sans-serif;
         margin-top: 2.5rem;
-    }
-
-    &__btn {
-        font-size: 1.4rem;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        color: $light;
-        padding: 1.5rem 9rem;
-        border: none;
-        border-radius: 5rem;
-        background-color: cornflowerblue;
-        margin-top: 3.5rem;
-        margin-bottom: 3rem;
-        background: linear-gradient(90deg, hsl(176, 68%, 64%),hsl(198, 60%, 50%) );
-        cursor: pointer;
     }
 }
 
@@ -124,7 +129,7 @@ body {
 .team {
     width: 95%;
     margin: auto;
-    padding: 11rem 0;
+    padding: 11rem 0 35rem;
 
     &__description-wrapper {
         display: flex;
@@ -218,6 +223,7 @@ body {
 // FOOTER
 
 .footer {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.4rem;
@@ -276,5 +282,35 @@ body {
         margin-right: 2rem;
      }
 }
+
+.signIn {
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    background: hsl(217, 28%, 15%);
+    padding: 3rem 5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+    
+    &__title {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    &__text {
+        padding: 2rem 0;
+    }
+
+    &__input {
+        width: 60%;
+        border: none;
+        border-radius: 5rem;
+        padding: 1.5rem 3.5rem;
+        margin-right: 2rem;
+        box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+    }
+}
+
 
 
