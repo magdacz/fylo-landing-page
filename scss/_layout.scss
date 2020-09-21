@@ -1,6 +1,9 @@
 body {
     background: $dark1;
     color: $light;
+    background-image: url('/images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 2rem 83rem;
 }
 
 button {
@@ -30,6 +33,7 @@ button {
     width: 100%;
     position: relative;
     color: $light;
+    margin-bottom: 7rem;
 
     .nav {
         width: 90%;
@@ -81,11 +85,12 @@ button {
 // FEATURES
 
 .features {
-    width: 70%;
-    margin: auto;
-    padding-top: 3rem;
+    width: 100%;
+    background: hsl(218, 28%, 13%);
 
     &__wrapper {
+        width: 70%;
+        margin: auto;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -127,9 +132,14 @@ button {
 // TEAM
 
 .team {
-    width: 95%;
-    margin: auto;
-    padding: 11rem 0 35rem;
+    width: 100%;
+    background: hsl(218, 28%, 13%);
+
+    &__wrapper {
+        width: 95%;
+        margin: auto;
+        padding: 11rem 0 35rem;
+    }
 
     &__description-wrapper {
         display: flex;
@@ -223,13 +233,32 @@ button {
 // FOOTER
 
 .footer {
+    width: 100%;
     position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.4rem;
-    font-family: 'Open Sans', sans-serif;
     background-color: hsl(216, 53%, 9%);
-    padding: 18rem 2rem 8rem;
+    padding-top: 25rem;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+        width: 95%;
+        // padding: 18rem 2rem 8rem;
+    }
+    // position: relative;
+    // display: flex;
+    // justify-content: space-evenly;
+    // font-size: 1.4rem;
+    // font-family: 'Open Sans', sans-serif;
+    // background-color: hsl(216, 53%, 9%);
+    // padding: 18rem 2rem 8rem;
+
+    &__logo {
+        position: absolute;
+        top: 16rem;
+        left: 12rem;
+    }
 
     
     &__location {
