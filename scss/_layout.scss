@@ -1,9 +1,6 @@
 body {
     background: $dark1;
     color: $light;
-    background-image: url('/images/bg-curvy-desktop.svg');
-    background-repeat: no-repeat;
-    background-position: 2rem 83rem;
 }
 
 button {
@@ -24,6 +21,10 @@ button {
 
 .button--signIn {
     padding: 1.5rem 3rem;
+
+    @include response(xs) {
+        min-width: 100%;
+    }
 }
 
 
@@ -33,7 +34,23 @@ button {
     width: 100%;
     position: relative;
     color: $light;
-    margin-bottom: 7rem;
+    padding-bottom: 7rem;
+    background-image: url('/images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 2rem 83rem;
+    overflow: hidden;
+
+    @include response(md) {
+        background-position: -30rem 83rem;
+    }
+
+    @include response(md2) {
+        background-position: -40rem 73rem;
+    }
+
+    @include response(sm2) {
+        background-position: -50rem 63rem;
+    }
 
     .nav {
         width: 90%;
@@ -42,16 +59,33 @@ button {
         left: 50%;
         transform: translateX(-50%);
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+
+        @include response(md2) {
+            width: 100%;
+            padding: 0 1.5rem;
+        }
     
         &__menu {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
+            @include response(xs) {
+                flex-basis: 100%;
+                justify-content: flex-end;
+                margin-top: 1rem;
+            }
         }
     
         &__item {
             margin-right: 5.5rem;
+
+            @include response(md2) {
+                margin-right: 0;
+                margin-left: 1.5rem;
+            }
         }
     
         &__link {
@@ -67,12 +101,21 @@ button {
 
     &__image-intro {
         margin-top: 20rem;
+
+        @include response(md) {
+            width: 80%;
+            height: auto;
+        }
     }
 
     &__title {
         font-size: 4rem;
         font-family: 'Raleway', sans-serif;
         margin-top: 3.5rem;
+
+        @include response(md) {
+            font-size: 3rem;
+        }
     }
 
     &__description {
@@ -141,10 +184,27 @@ button {
         padding: 11rem 0 35rem;
     }
 
+    &__img {
+
+        @include response(lg2) {
+            width: 50%;
+            height: auto;
+         }
+
+         @include response(md) {
+            width: 80%;
+            margin-bottom: 3rem;
+          }
+    }
+
     &__description-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
+        @include response(md) {
+           flex-direction: column;
+         }
     }
 
     &__description {
@@ -155,6 +215,10 @@ button {
         font-size: 4rem;
         font-family: 'Raleway', sans-serif; 
         margin-bottom: 2rem;
+
+        @include response(md) {
+            font-size: 3rem;
+        }
     }
 
     &__description-text {
@@ -179,6 +243,7 @@ button {
     }
 
     .profile {
+        position: relative;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -191,6 +256,16 @@ button {
             padding: 4rem 3rem 0;
             margin: 1rem;
             border-radius: 0.5rem;
+            
+            &:first-child {
+                position: relative;
+            }
+        }
+
+        &__quote-image {
+            position: absolute;
+            top: -3.5rem;
+            left: -1rem;
         }
 
         &__quote-text {
@@ -236,31 +311,56 @@ button {
     width: 100%;
     position: relative;
     background-color: hsl(216, 53%, 9%);
-    padding-top: 25rem;
+    padding-top: 20rem;
+
+    @include response(lg) {
+        padding-top: 20rem;
+    }
+
+    @include response(lg2) {
+        padding-top: 25rem;
+    }
+
+    @include response(md) {
+        padding-top: 20rem;
+    }
+
+    @include response(xs2) {
+        padding-top: 25rem;
+    }
 
     &__wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         font-size: 1.4rem;
         font-family: 'Open Sans', sans-serif;
         width: 95%;
-        // padding: 18rem 2rem 8rem;
-    }
-    // position: relative;
-    // display: flex;
-    // justify-content: space-evenly;
-    // font-size: 1.4rem;
-    // font-family: 'Open Sans', sans-serif;
-    // background-color: hsl(216, 53%, 9%);
-    // padding: 18rem 2rem 8rem;
+        margin: auto;
 
-    &__logo {
-        position: absolute;
-        top: 16rem;
-        left: 12rem;
+        @include response(lg2) {
+            justify-content: space-between;
+        }
+
+       @include response(md2) {
+           justify-content: space-evenly;
+       }
+
+       @include response(sm) {
+        flex-direction: column;
+        }
     }
 
-    
+    &__logo-wrapper {
+        flex-basis: 100%;
+        margin-bottom: 2.5rem;
+        margin-left: 8%;
+
+        @include response(sm) {
+            margin-left: 0;
+        }
+    }
+
     &__location {
         display: flex;
         width: 35rem;
@@ -273,6 +373,10 @@ button {
      &__contact {
          display: flex;
          flex-direction: column;
+
+         @include response(sm) {
+            padding: 5rem 0 0;
+        }
      }
 
      &__contact-info {
@@ -287,6 +391,17 @@ button {
      &__links {
          display: flex;
          flex-direction: column;
+
+         @include response(md2) {
+            flex-basis: 50%;
+            padding-top: 3rem;
+            display: flex;
+            text-align: center;
+        }
+
+        @include response(sm) {
+            text-align: left;
+        }
      }
 
      &__link {
@@ -297,6 +412,12 @@ button {
      &__social-media {
          display: flex;
          flex-direction: row;
+
+         @include response(md) {
+             flex-basis: 100%;
+             justify-content: center;
+             padding: 3rem 0;
+        }
      }
 
      &__social-icon {
@@ -308,8 +429,9 @@ button {
         line-height: 3.5rem;
         border-radius: 50%;
         border: 1px solid $light;
-        margin-right: 2rem;
+        margin-left: 2rem;
      }
+
 }
 
 .signIn {
@@ -322,6 +444,23 @@ button {
     text-align: center;
     border-radius: 0.5rem;
     box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+
+    @include response(lg) {
+        width: 60%;
+    }
+
+    @include response(md2) {
+        transform: translate(-50%, 40%);
+    }
+
+    @include response(sm) {
+        min-width: 80%;
+        transform: translate(-50%, 85%);
+    }
+
+    @include response(xs2) {
+        transform: translate(-50%, 55%);
+    }
     
     &__title {
         font-family: 'Raleway', sans-serif;
@@ -338,6 +477,10 @@ button {
         padding: 1.5rem 3.5rem;
         margin-right: 2rem;
         box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+
+        @include response(md) {
+            width: 100%;
+        }
     }
 }
 

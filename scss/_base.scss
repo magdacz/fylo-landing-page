@@ -21,5 +21,55 @@ $dark4: hsl(219, 30%, 18%);
 
 $light: hsl(0, 0%, 100%);
 
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Raleway', sans-serif;
+@mixin response($breakpoint) {
+
+    @if($breakpoint == lg) {
+        @media (max-width: 1300px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == lg2) {
+        @media (max-width: 1050px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == md) {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == md2) {
+        @media (max-width: 790px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == sm) {
+        @media (max-width: 620px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == sm2) {
+        @media (max-width: 550px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == xs) {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == xs2) {
+        @media (max-width: 450px) {
+            @content;
+        }
+    }
+
+    
+}
