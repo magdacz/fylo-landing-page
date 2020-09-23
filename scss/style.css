@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -135,6 +136,12 @@ button {
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 1.8rem;
+  -webkit-transition: color ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
+}
+
+.header .nav__link:hover {
+  color: #50B1AF;
 }
 
 .header .header__wrapper {
@@ -531,6 +538,12 @@ button {
 .footer__link {
   color: white;
   margin-bottom: 1.5rem;
+  -webkit-transition: color ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
+}
+
+.footer__link:hover {
+  color: #50B1AF;
 }
 
 .footer__social-media {
@@ -564,6 +577,13 @@ button {
   border-radius: 50%;
   border: 1px solid white;
   margin-left: 2rem;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.footer__social-link:hover .footer__social-icon:hover {
+  color: #50B1AF;
+  border-color: #50B1AF;
 }
 
 .signIn {

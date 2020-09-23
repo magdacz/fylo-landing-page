@@ -92,6 +92,11 @@ button {
             color: $light;
             font-family: 'Raleway', sans-serif;
             font-size: 1.8rem;
+            transition: color ease-in-out 0.3s;
+
+            &:hover {
+                color: #50B1AF;
+            }
         }
     }
 
@@ -407,6 +412,11 @@ button {
      &__link {
          color: $light;
          margin-bottom: 1.5rem;
+         transition: color ease-in-out 0.3s;
+
+         &:hover {
+            color: #50B1AF;
+         }
      }
 
      &__social-media {
@@ -430,6 +440,15 @@ button {
         border-radius: 50%;
         border: 1px solid $light;
         margin-left: 2rem;
+        transition: all ease-in-out 0.3s;
+
+     }
+
+     &__social-link:hover &__social-icon {
+        &:hover {
+            color: #50B1AF;
+            border-color: #50B1AF;
+         }
      }
 
 }
