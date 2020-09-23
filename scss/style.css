@@ -17,22 +17,43 @@ body {
   color: white;
 }
 
-button {
+.button {
+  position: relative;
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  color: white;
   padding: 1.5rem 9rem;
   border: none;
   border-radius: 5rem;
-  background-color: cornflowerblue;
   margin-top: 3.5rem;
   margin-bottom: 3rem;
+  color: white;
   background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
   background: linear-gradient(90deg, #65e2d9, #339ecc);
   -webkit-box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
           box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+  z-index: 1;
+  overflow: hidden;
   cursor: pointer;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(-90deg, #65e2d9, #339ecc);
+  z-index: -1;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.button:hover::before {
+  opacity: 1;
 }
 
 .button--signIn {

@@ -3,20 +3,40 @@ body {
     color: $light;
 }
 
-button {
+.button {
+    position: relative;
     font-size: 1.4rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    color: $light;
     padding: 1.5rem 9rem;
     border: none;
     border-radius: 5rem;
-    background-color: cornflowerblue;
     margin-top: 3.5rem;
     margin-bottom: 3rem;
+    color: $light;
     background: linear-gradient(90deg, hsl(176, 68%, 64%),hsl(198, 60%, 50%) );
     box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+    z-index: 1;
+    overflow: hidden;
     cursor: pointer;
+
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(-90deg, hsl(176, 68%, 64%),hsl(198, 60%, 50%) );
+        z-index: -1;
+        transition: opacity 0.5s linear;
+        opacity: 0;
+    }
+
+    &:hover::before {
+        opacity: 1;
+      }
 }
 
 .button--signIn {
