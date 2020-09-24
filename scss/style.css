@@ -71,7 +71,7 @@ body {
   position: relative;
   color: white;
   padding-bottom: 7rem;
-  background-image: url("/images/bg-curvy-desktop.svg");
+  background-image: url("../images/bg-curvy-desktop.svg");
   background-repeat: no-repeat;
   background-position: 2rem 83rem;
   overflow: hidden;
