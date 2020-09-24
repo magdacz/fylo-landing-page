@@ -182,11 +182,22 @@
                 <h2 class="signIn__title">Get early access today</h2>
                 <p class="signIn__text">It only takes a minute to sign up and our free starter tier is extremly generous. If you have any questions, our support team would be happy to help you.</p>
                 <div class="signIn__wrapper">
-                    <input type="email" class="signIn__input" required placeholder="email@example.com">
+                    <input type="email" class="signIn__input" placeholder="email@example.com">
+                    <p class="signIn__error">Please check your email address and try again!</p>
                     <button class="button button--signIn" type="submit">Get Started For Free</button>
                 </div>
             </form>
         </div>
     </footer>
+
+    <div class="modal">
+        <h2 class="modal__title">
+            Thanks for signing up!
+        </h2>
+        <p class="modal__text">We hope you enjoy it!</p>
+        <button class="modal__close"> <i class="fas fa-times modal__close-icon"></i></button>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>

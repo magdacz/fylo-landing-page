@@ -665,11 +665,86 @@ body {
   margin-right: 2rem;
   -webkit-box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
           box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+  outline: none;
+}
+
+.signIn__input:focus {
+  -webkit-box-shadow: inset 0 0 5px #000000;
+          box-shadow: inset 0 0 5px #000000;
 }
 
 @media (max-width: 900px) {
   .signIn__input {
     width: 100%;
   }
+}
+
+.signIn__error {
+  color: red;
+  font-size: 1.3rem;
+  visibility: hidden;
+}
+
+.signIn__error.show {
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  position: relative;
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  background-color: #0b1523;
+  min-width: 35rem;
+  border: 0.3rem solid white;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+          box-shadow: 0.3rem 0.3rem 0.7rem #090e16;
+  text-align: center;
+  padding: 10rem;
+  z-index: 5;
+}
+
+@media (max-width: 620px) {
+  .modal {
+    padding: 5rem;
+  }
+}
+
+.modal__title {
+  font-size: 3.5rem;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 620px) {
+  .modal__title {
+    font-size: 3rem;
+  }
+}
+
+.modal__text {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
