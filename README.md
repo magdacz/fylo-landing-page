@@ -3,6 +3,8 @@
 
 ![Fylo](./images/Fylo.jpg)
 
+## Live: https://magdacz.github.io/fylo-landing-page/
+
 ## Technologie:
 * HTML5
 * CSS3
